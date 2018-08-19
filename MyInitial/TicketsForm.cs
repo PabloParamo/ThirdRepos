@@ -31,14 +31,16 @@ namespace Ticketing
             mQuantity = int.Parse(txtQuantity.Text);
 
             if (chkDiscount.Checked)
-                { mDiscount = true; }
+            { mDiscount = true; }
 
             if (radBalcony.Checked)
-                { mSection = 1; }
+            { mSection = 1; }
             if (radGeneral.Checked)
-                { mSection = 2; }
+            { mSection = 2; }
             if (radBox.Checked)
-                { mSection = 3; }
+            { mSection = 3; }
+            if (radBack.Checked)
+            { mSection = 4; }
 
             mTicketPrice = new TicketPrice(mSection, mQuantity, mDiscount);
 
@@ -53,7 +55,7 @@ namespace Ticketing
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -73,6 +75,11 @@ namespace Ticketing
         }
 
         private void lblAmountDue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

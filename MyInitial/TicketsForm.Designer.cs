@@ -40,6 +40,7 @@
             this.cmdCalculate = new System.Windows.Forms.Button();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.radBack = new System.Windows.Forms.RadioButton();
             this.grpSection.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,6 +133,7 @@
             // 
             // grpSection
             // 
+            this.grpSection.Controls.Add(this.radBack);
             this.grpSection.Controls.Add(this.radBox);
             this.grpSection.Controls.Add(this.radGeneral);
             this.grpSection.Controls.Add(this.radBalcony);
@@ -174,6 +176,18 @@
             this.label1.Text = "Discount";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // radBack
+            // 
+            this.radBack.AutoSize = true;
+            this.radBack.Location = new System.Drawing.Point(52, 162);
+            this.radBack.Margin = new System.Windows.Forms.Padding(6);
+            this.radBack.Name = "radBack";
+            this.radBack.Size = new System.Drawing.Size(139, 29);
+            this.radBack.TabIndex = 9;
+            this.radBack.Text = "Back Stall";
+            this.radBack.UseVisualStyleBackColor = true;
+            this.radBack.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -213,6 +227,7 @@
         private System.Windows.Forms.Button cmdCalculate;
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton radBack;
     }
 }
 
