@@ -1,4 +1,6 @@
-﻿namespace Ticketing
+﻿using System;
+
+namespace Ticketing
 {
     partial class TicketsForm
     {
@@ -40,6 +42,7 @@
             this.cmdCalculate = new System.Windows.Forms.Button();
             this.txtDiscount = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkDiscountChild = new System.Windows.Forms.CheckBox();
             this.radBack = new System.Windows.Forms.RadioButton();
             this.grpSection.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +95,7 @@
             this.chkDiscount.TabIndex = 5;
             this.chkDiscount.Text = "Senior / Student";
             this.chkDiscount.UseVisualStyleBackColor = true;
+            this.chkDiscount.CheckedChanged += new System.EventHandler(this.chkDiscount_CheckedChanged);
             // 
             // radBalcony
             // 
@@ -176,6 +180,18 @@
             this.label1.Text = "Discount";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // chkDiscountChild
+            // 
+            this.chkDiscountChild.AutoSize = true;
+            this.chkDiscountChild.Location = new System.Drawing.Point(432, 183);
+            this.chkDiscountChild.Margin = new System.Windows.Forms.Padding(6);
+            this.chkDiscountChild.Name = "chkDiscountChild";
+            this.chkDiscountChild.Size = new System.Drawing.Size(93, 29);
+            this.chkDiscountChild.TabIndex = 13;
+            this.chkDiscountChild.Text = "Child";
+            this.chkDiscountChild.UseVisualStyleBackColor = true;
+            this.chkDiscountChild.CheckedChanged += new System.EventHandler(this.chkDiscountChild_CheckedChanged);
+            // 
             // radBack
             // 
             this.radBack.AutoSize = true;
@@ -186,13 +202,14 @@
             this.radBack.TabIndex = 9;
             this.radBack.Text = "Back Stall";
             this.radBack.UseVisualStyleBackColor = true;
-            this.radBack.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.radBack.CheckedChanged += new System.EventHandler(this.radBack_CheckedChanged);
             // 
             // TicketsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1216, 856);
+            this.Controls.Add(this.chkDiscountChild);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDiscount);
             this.Controls.Add(this.cmdCalculate);
@@ -213,6 +230,11 @@
 
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private System.Windows.Forms.Label lblQuantity;
@@ -227,6 +249,7 @@
         private System.Windows.Forms.Button cmdCalculate;
         private System.Windows.Forms.TextBox txtDiscount;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chkDiscountChild;
         private System.Windows.Forms.RadioButton radBack;
     }
 }
